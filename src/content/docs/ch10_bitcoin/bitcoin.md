@@ -1,5 +1,5 @@
 ---
-title: Chapter 9 Bitcoin
+title: Chapter 10 Bitcoin
 --- 
 
 ## 1 The Evolution of Money and the Rise of Bitcoin

@@ -1,5 +1,5 @@
 ---
-title: Chapter 10 Netflix
+title: Chapter 11 Netflix
 ---
 
 One of the most illustrative cases of digital transformation — and failure to adapt — is the story of **Blockbuster versus Netflix**. It's a powerful example I often use, structured in three stages that reflect the evolution of competition and the deeper shift in how businesses should understand their products, operations, and markets in the digital age.

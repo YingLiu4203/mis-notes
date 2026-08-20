@@ -1,5 +1,5 @@
 ---
-title: Chapter 7 Cryptograph
+title: Chapter 8 Cryptograph
 ---
 
 ## 1 Symmetric Encryption
