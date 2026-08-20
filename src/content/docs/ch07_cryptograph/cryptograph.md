@@ -8,7 +8,7 @@ Symmetric encryption is a type of cryptography that uses the same secret key for
 
 The process of symmetric encryption involves three main steps: plaintext, encryption, and decryption. The original information or data that needs to be protected is referred to as plaintext. The plaintext is then combined with the secret key using a mathematical algorithm, resulting in ciphertext. Finally, the ciphertext is combined with the same secret key using the same algorithm, restoring the original plaintext.
 
-![Symmetric Encryption](./images/Symmetric_encryption.png)
+![Symmetric Encryption](images/Symmetric_encryption.png)
 
 [Source: Symmetric Encryption 101](https://www.thesslstore.com/blog/symmetric-encryption-101-definition-how-it-works-when-its-used/)
 
@@ -46,7 +46,7 @@ Hashing ensures that data is not tampered with or altered during transmission or
 
 Hashing is used to store passwords securely, making it difficult for attackers to obtain the original password. When a user creates a password, a hash value is generated and stored instead of the actual password. When the user logs in, the input password is hashed and compared with the stored hash value to authenticate the user. This way, even if an attacker gains access to the stored hash values, they cannot obtain the original passwords.
 
-![Password Hashing](./images/password_hashing.png)
+![Password Hashing](images/password_hashing.png)
 
 [Source: Authgear](https://www.authgear.com/post/password-hashing-salting)
 
@@ -60,7 +60,7 @@ When downloading software, it is crucial to ensure that the file is not tampered
 
 On the client-side, the received software update file is recalculated to generate a new hash value. This recalculated hash value is then compared with the received hash value from the server. If the comparison matches, it ensures that the software update file was not tampered with or altered during transmission. However, if the comparison does not match, it indicates that the file was modified or corrupted during transmission, and the client can alert the user or take appropriate action.
 
-![Hash for data integrity](./images/hash_integrity.jpg)
+![Hash for data integrity](images/hash_integrity.jpg)
 
 [Source: Tutorial Point](https://www.tutorialspoint.com/cryptography/cryptography_hash_functions.htm)
 
@@ -76,7 +76,7 @@ One of the most popular asymmetric encryption algorithms is RSA, widely used for
 
 The fundamental principle of asymmetric encryption is based on the concept of key pairs. A user first generate a pair of keys that consists of a public key and a private key from a large random number.
 
-![Key Generation](./images/public_key_gen.png)
+![Key Generation](images/public_key_gen.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Public-key_cryptography)
 
@@ -100,7 +100,7 @@ A private key, on the other hand, is a cryptographic key that is kept confidenti
 
 In a public-key encryption system, anyone can use the public key to lock (encrypt) a message, but only the person with the matching private key can unlock (decrypt) it to read the original message.
 
-![Public Key Encryption](./images/public_key_encryption.png)
+![Public Key Encryption](images/public_key_encryption.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Public-key_cryptography)
 
@@ -122,7 +122,7 @@ Public key and private key can be used in a key exchange protocol to create a sh
 - Alice and Bob exchange their public keys over a reliable channel (like a trusted messenger or a secure Web site).
 - They use each other's public keys and their own private keys to calculate a shared secret key. This shared key is never sent in plain text, so it remains secure.
 
-![Key Exchange](./images/key_exchange.png)
+![Key Exchange](images/key_exchange.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Public-key_cryptography)
 
@@ -145,7 +145,7 @@ The use of private keys and public keys in digital signatures is a fundamental a
 
 Private keys play a crucial role in generating digital signatures. When a sender, Alice, wants to send a secure message to Bob, she uses her private key to encrypt the hash of the message. This creates a digital signature that is unique to the message and Alice's private key. The digital signature is then sent along with the original message. On the receiving end, Bob uses Alice's public key to decrypt the digital signature. Bob also hashes the received message using the same algorithm as Alice. He then compares the decrypted digital signature with the newly generated hash. If the two values match, Bob can be certain that the message came from Alice and was not tampered with during transmission.
 
-![Digital Signature](./images/digital_signature.png)
+![Digital Signature](images/digital_signature.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Public-key_cryptography)
 
@@ -158,7 +158,7 @@ Bitcoin, the pioneering cryptocurrency, has revolutionized the way we think abou
 
 The process of identifying users in Bitcoin begins with the generation of a key pair, consisting of a private key and a public key. The private key is kept secret, while the public key is shared with others. The public key serves as a unique identifier, allowing users to receive bitcoins and participate in the Bitcoin network. From the public key, a bitcoin address is generated through a series of mathematical operations, providing a shorter and more convenient version of the public key. The bitcoin address, starting with `1` or `3`, is a string of letters and numbers (For example, `1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa`) that is used to receive bitcoins. When a user wants to receive bitcoins, they share their bitcoin address with the sender, who uses this address to send bitcoins. The bitcoin network then verifies that the sender has the private key corresponding to the public key used to receive the bitcoins, ensuring that the transaction is secure and legitimate.
 
-![Digital Signature](./images/bitcoin.png)
+![Digital Signature](images/bitcoin.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Bitcoin)
 
@@ -180,7 +180,7 @@ One of the critical steps in this process is the validation of a Certificate Sig
 - Step 6: Signing of Digital Certificate. The CA signs the certificate using its private key, creating a digital signature that verifies the certificate's authenticity.
 - Step 7: Delivery of Signed Certificate. The CA sends the signed certificate to the applicant, who can then install it on their server or device.
 
-![Certificate](./images/certificate.webp)
+![Certificate](images/certificate.webp)
 
 [Source: Automate the Local Certificate Authority Registration with Python](https://python.plainenglish.io/automate-the-local-certificate-authority-registration-with-python-ced8771b2742)
 

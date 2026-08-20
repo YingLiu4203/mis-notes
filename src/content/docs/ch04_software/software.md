@@ -20,7 +20,7 @@ Each machine code instruction is a binary sequence that tells the CPU to perform
 
 To bridge the gap between machine code and human understanding, people developed assembly language to provide a symbolic representation of machine instructions. Assembly language uses mnemonic codes to represent machine operations and employs symbolic labels to denote memory addresses and data. Each assembly instruction corresponds to one machine instruction, making it more readable than raw machine code but still closely tied to the underlying hardware. Of course, a CPU doesn't understand assembly language code. To make an assembly program executable, one needs to use a compiler (also called an assembler here) to compile the assembly code into machine code.
 
-![Machine code](./images/machine_code.png)
+![Machine code](images/machine_code.png)
 
 [Source: Assembly Language](https://computerscience.chemeketa.edu/cs160Reader/ProgrammingLanguages/Assembly.html)
 
@@ -46,7 +46,7 @@ Followings are common functions of OS:
 
 Popular operating systems include Windows, macOS, Linux, Android, and iOS. Following diagrams shows the relationship among hardware, OS, applications and users.
 
-![software layers](./images/software_layers.png)
+![software layers](images/software_layers.png)
 
 [Source](https://opentextbook.site/informationsystems2019/chapter/chapter-3-software-information-systems-introduction/)
 
@@ -59,7 +59,7 @@ All operating systems provide the so-called user interface (UI) to let users acc
 
 Following picture shows a Linux CLI and a Windows GUI.
 
-![UI](./images/ui.png)
+![UI](images/ui.png)
 
 [Source](https://www.linkedin.com/pulse/cli-better-than-gui-olalekan-oladipupo/)
 
@@ -135,7 +135,7 @@ Programming, also known as coding, is a systematic process that involves designi
 
 Programming languages can be categorized into two main types based on their level of abstraction, complexity, and proximity to the computer hardware. The distinction between high-level and low-level programming languages is a fundamental concept in computer science.
 
-![High Level vs Low Level](./images/High_level_low_level.webp)
+![High Level vs Low Level](images/High_level_low_level.webp)
 
 [Source: In Programmer](https://inprogrammer.com/high-level-vs-low-level/)
 
@@ -147,7 +147,7 @@ On the other hand, low-level programming languages are closer to the computer ha
 
 Following digram shows the differences among four programming languages for a computer to say `Hello World`. Which is the simplest/slowest?
 
-![languages](./images/languages.jpg)
+![languages](images/languages.jpg)
 
 [Source: reddit](https://www.reddit.com/r/ProgrammerHumor/comments/ocxg91/python_rocks/)
 
@@ -167,7 +167,7 @@ These approaches allow programmers to write code in high-level languages, while 
 
 The compiling concept is a fundamental process in computer science that allows programmers to write code in high-level programming languages and translate it into machine code that can be executed by a computer. C is a very successful high level system software programming language that is compiled into machine code before it can be executed in a computer.
 
-![Compiler](./images/compiler.png)
+![Compiler](images/compiler.png)
 
 [Source: Code For Win](https://codeforwin.org/fundamentals/compiler-and-its-need)
 
@@ -204,7 +204,7 @@ Finally, the programmer runs the executable file, and the machine code is execut
 
 The interpreting concept allows programmers to write code in high-level programming languages and execute it directly, without the need for compilation.
 
-![Interpreter](./images/interpreter.webp)
+![Interpreter](images/interpreter.webp)
 
 In JavaScript, code is written in a text editor or IDE, using high-level syntax and semantics to express the desired program behavior. For instance:
 
@@ -229,7 +229,7 @@ In JavaScript, the interpreter is usually a web browser or a `Node.js` runtime e
 
 The Compiling + Interpreting concept is a hybrid approach that combines the benefits of both compilation and interpretation. In this approach, the code is first compiled into an intermediate form, and then interpreted and executed by a virtual machine or runtime environment.
 
-![Java compiler and JVM](./images/Java-Compiler-Step-by-Step.png)
+![Java compiler and JVM](images/Java-Compiler-Step-by-Step.png)
 
 [Source: Geeks for Geeks](https://www.geeksforgeeks.org/what-are-the-roles-of-java-compiler-and-interpreter/)
 
@@ -275,7 +275,7 @@ Programming paradigms are the fundamental styles or approaches to writing softwa
 
 Procedural Programming is the oldest paradigm, focusing on procedures and functions that perform specific tasks. A procedural program is like a recipe, where a set of instructions (procedures) are followed in a specific order to produce a desired outcome. Just as a recipe tells you how to combine ingredients and cook a dish, a procedural program tells the computer exactly what steps to take and in what order to accomplish a task. This paradigm emphasizes step-by-step execution, sequential flow, and explicit control over data and program flow. Programs are built around procedures, each solving a specific problem. This paradigm is ideal for simple, linear applications, scripting, and embedded systems.
 
-![Procedural](./images/procedural.webp)
+![Procedural](images/procedural.webp)
 
 [Source: Programming Know](https://programmingknow.com/procedure-programming/)
 
@@ -322,7 +322,7 @@ Note that in procedural programming, the focus is on the steps needed to accompl
 
 Object-Oriented Programming (OOP) is a revolutionary programming paradigm that has transformed the way developers design and build software systems. At the heart of OOP lies the concept of classes and objects, which enable developers to create modular, reusable, and maintainable code.
 
-![Procedural](./images/oop.webp)
+![Procedural](images/oop.webp)
 
 [Source: Programming Know](https://programmingknow.com/procedure-programming/)
 
@@ -483,7 +483,7 @@ Each programming language or operating system have one or more package installer
 
 Software API (Application Programming Interface) is the interface between software systems, enabling them to communicate and exchange data seamlessly. Just as a user interface (UI) facilitates interaction between humans and software, API acts as the intermediary between software applications, allowing them to request services, exchange data, and leverage each other's functionality. In essence, API defines the rules and protocols that govern how software systems interact, much like how UI defines how users interact with software. By providing a standardized interface, API enables software developers to access and utilize pre-built functionality, reducing the need to write code from scratch.
 
-![API](./images/api.webp)
+![API](images/api.webp)
 
 [Source Tech Funnel](https://www.techfunnel.com/information-technology/application-programming-interface/)
 
@@ -521,7 +521,7 @@ By leveraging Stripe's payment APIs, ShopIT not only enhanced the security of it
 
 In the realm of computer science, an algorithm is a precise, step-by-step procedure or set of rules that defines how to solve a particular problem or perform a specific task. It is akin to a recipe that guides the process of completing a task, providing a systematic approach to problem-solving. Algorithms can range from simple procedures, such as sorting a list of numbers, to complex algorithms used in artificial intelligence and machine learning.
 
-![Algorithm](./images/algorithm.jpg)
+![Algorithm](images/algorithm.jpg)
 
 [Source: Geeks for Geeks](https://www.geeksforgeeks.org/introduction-to-algorithms/)
 
@@ -531,6 +531,6 @@ Additionally, algorithms must be finite, meaning they must eventually terminate 
 
 Algorithmic thinking, or computational thinking, is the ability to conceptualize, design, and analyze algorithms to solve problems effectively. It is a fundamental skill in computer science and is essential for leveraging the power of computers to solve complex problems efficiently. In today’s increasingly digital world, algorithmic thinking enables individuals to harness the power of computers to solve a wide range of problems efficiently. From optimizing business processes to analyzing large datasets and developing innovative software solutions, algorithmic thinking empowers individuals to leverage technology to drive innovation and progress.
 
-![Brian vs Computer](./images/brain_vs_computer.png)
+![Brian vs Computer](images/brain_vs_computer.png)
 
 [Source: foglets.com](https://foglets.com/supercomputer-vs-human-brain/)

@@ -33,7 +33,7 @@ Here are some examples of Moore's Law:
 - In 1985, the Intel 80386 had a 275,000 transistor count.
 - In 2024, chip makers can put 50 billion transistors on a chip the size of a fingernail.
 
-![Moore's Law](./images/Moores_Law.png)
+![Moore's Law](images/Moores_Law.png)
 [Source: Wikipedia Moore's Law](https://en.wikipedia.org/wiki/Moore%27s_law)
 
 The performance gain of computers has been unprecedented in human history, with processing power doubling approximately every two years. This exponential growth has led to a staggering increase in computing capabilities, with modern smartphones possessing more processing power than the entire Apollo 11 spacecraft that landed humans on the moon. In fact, if the automotive industry had experienced similar progress, a car would have gone from a top speed of 30 miles per hour in 1971 to over 300,000 miles per hour today, and would have cost just $2. Moreover, this rate of progress is unmatched by any other technological advancement in human history, making the performance gain of computers a truly remarkable phenomenon.
@@ -46,13 +46,13 @@ The computational power of today’s iPhone is incredibly impressive, especially
 
 The Apple iPhone 15, released in 2023, is equipped with the A17 Bionic chip. This chip includes a 6-core CPU and a 5-core GPU. According to benchmarks, the A17 Bionic chip is capable of achieving approximately 20 trillion operations per second (teraflops). In 2024, its price is about $1,000.
 
-![iPhone 15](./images/iPhone15.webp)
+![iPhone 15](images/iPhone15.webp)
 
 [Source: Mashable.com](https://mashable.com/article/apple-iphone-15-pro-max-hands-on)
 
 In the 1980s, the computational landscape was dominated by mainframe computers and early supercomputers. One of the most powerful supercomputers of that era was the Cray-2, introduced in 1985. The Cray-2 was capable of approximately 1.9 billion floating-point operations per second (gigaflops). Its price is $16 million at that time and is about $41 million in today's dollar.
 
-![Cray 2](./images/Cray2_1985.jpg)
+![Cray 2](images/Cray2_1985.jpg)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Cray-2)
 
@@ -60,7 +60,7 @@ To compare the computational power of the iPhone 15 with the Cray-2: the iPhone 
 
 Estimating the total computational power in the US in the 1980s involves considering the number of supercomputers and mainframes in operation. Even if we assume there were several dozen supercomputers similar to the Cray-2 and numerous less powerful mainframes, the total computational power would still be like what a single modern iPhone can achieve. The estimated total computational power in the US during the 1980s would likely amount to several hundred gigaflops to a few teraflops at most. This stark contrast underscores the incredible advancements in technology, where a single handheld device today surpasses the entire nation’s computational capacity from a few decades ago.
 
-![individual](./images/individual.webp)
+![individual](images/individual.webp)
 
 Source: OpenAI DALL E3.
 
@@ -72,11 +72,11 @@ The rapid advancement and democratization of computational power, exemplified by
 
 Computer hardware components are the physical elements that make up a computer system, enabling it to perform tasks, store data, and interact with users. The four primary components of computer hardware are input devices, output devices, storage devices, and the central processing unit (CPU).
 
-![Computer](./images/computer.gif)
+![Computer](images/computer.gif)
 
 [Source: How Computers Work](http://www.carnegiecyberacademy.com/facultyPages/computer/computers.html)
 
-![Components](./images/computer_components.png)
+![Components](images/computer_components.png)
 
 [Source: Geeks for Geeks](https://www.geeksforgeeks.org/introduction-of-input-output-processor/)
 
@@ -147,7 +147,7 @@ The CPU, Memory, Disk, and I/O systems work together to execute instructions and
 1. The user views the results on an output device (I/O system).
 1. The CPU writes the results to disk for permanent storage.
 
-![Computer Architecture](./images/Computer_architecture.png)
+![Computer Architecture](images/Computer_architecture.png)
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Computer_architecture)
 
 ### 3.3 A Hierarchical Architecture
@@ -180,7 +180,7 @@ Another way to understand computer architecture is the so-called Von Neumann arc
 
 The von Neumann architecture consists of five main components: a processing unit, control unit, memory, external mass storage, and input and output mechanisms. The processing unit includes an arithmetic logic unit and processor registers, which enable the computer to perform calculations and store data temporarily. The control unit includes an instruction register and a program counter, which manage the execution of instructions and keep track of the program's progress. Memory stores both data and instructions, allowing the computer to access and execute programs repeatedly. External mass storage enables the computer to store large amounts of data and programs, making it a highly efficient and versatile tool. Input and output mechanisms allow users to interact with the computer and view the results of its calculations.
 
-![Von Neumann Architecture](./images/Von_Neumann_Architecture.png)
+![Von Neumann Architecture](images/Von_Neumann_Architecture.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Von_Neumann_architecture)
 
@@ -208,7 +208,7 @@ Please watch the [Demo of GPU versus CPU](https://www.youtube.com/watch?v=-P28LK
 
 Traditionally, Central Processing Units (CPUs) were the go-to choice for computing tasks, but they were limited by their serial processing architecture. In contrast, GPUs offered a massively parallel architecture, making them ideal for handling the complex mathematical calculations required for AI workloads. AI uses GPUs (Graphics Processing Units) because they are highly efficient at handling the large-scale parallel processing required for training and running deep learning models. Unlike CPUs, which are optimized for general-purpose tasks and can execute a few complex operations at a time, GPUs are designed to perform many simple, repetitive operations simultaneously. This makes them ideal for the matrix and vector computations that are fundamental to neural networks. The parallel processing capability of GPUs significantly accelerates the training process of AI models, allowing for the handling of vast amounts of data and complex calculations more quickly and efficiently than CPUs. Consequently, GPUs enable more rapid experimentation, iteration, and deployment of AI applications, making them essential for modern AI development.
 
-![GPU AI](./images/GPU_ai.webp)
+![GPU AI](images/GPU_ai.webp)
 
 NVIDIA, a pioneer in GPU technology, has played a significant role in this transformation. Their GPUs, such as the Tesla V100 and A100, are specifically designed for AI workloads, offering unprecedented performance and memory bandwidth. Additionally, their software frameworks, like CUDA and cuDNN, provide developers with the tools they need to harness the power of GPUs for AI applications.
 
@@ -225,7 +225,7 @@ The GPU has emerged as a crucial component in the AI ecosystem, offering unparal
 
 Cloud computing represents a paradigm shift in how computing resources are managed and utilized. At the hardware level, it involves the virtualization of physical components such as CPUs, RAM, and storage disks to provide scalable and efficient solutions. CPUs in cloud computing are provided as virtual CPUs (vCPUs), which are virtualized versions of physical CPUs managed by the cloud provider. RAM is allocated based on user needs, allowing for quick read and write operations that are crucial for application performance. Disk storage, often virtualized as block or object storage, enables scalable and persistent data storage solutions. This virtualization allows users to dynamically scale their resources, optimizing performance and cost efficiency. Amazon AWS, Microsoft Azure, and Google Cloud Platform (GCP) are top three cloud computing service providers.
 
-![Cloud Computing](./images/Cloud_computing.png)
+![Cloud Computing](images/Cloud_computing.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Cloud_computing)
 
@@ -245,7 +245,7 @@ In the early 1970s, Citibank embarked on a groundbreaking initiative that would 
 
 To address these challenges and enhance customer service, Citibank decided to invest heavily in the deployment of ATMs. These machines would allow customers to perform basic banking transactions without needing to enter a branch, providing 24/7 access to banking services. Citibank began installing ATMs in strategic locations throughout New York City in 1977. The initial rollout included 100 machines, primarily in high-traffic areas such as shopping malls, airports, and busy street corners.
 
-![ATM](./images/atm.jpg)
+![ATM](images/atm.jpg)
 
 [Source: The Cash Machine Is Blue And Green](https://tedium.co/2023/09/15/atm-history-important-moments/)
 

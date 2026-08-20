@@ -45,12 +45,12 @@ Most of today's business applications were first developed in 1960s. Following a
 
 Below is the image of IBM 1401 -- the first widely used business computer.
 
-![IBM 1401](./images/IBM_1401.jpeg)
+![IBM 1401](images/IBM_1401.jpeg)
 Source [IBM 1401 in Computer History Museum](https://computerhistory.org/blog/about-the-computer-history-museums-ibm-1401-machines/).
 
 The IBM 1401 use punched cards as its data input.
 
-![Punched Card](./images/Punched_card.jpg)
+![Punched Card](images/Punched_card.jpg)
 Source [Punched Card in Wikipedia](https://en.wikipedia.org/wiki/Punched_card).
 
 ### 2.2 The SABRE System
@@ -69,7 +69,7 @@ Work on the SABRE system began in earnest in 1957, and it took several years of 
 
 By 1960, the system was partially operational, and in 1964, it was fully deployed. SABRE used two IBM 7090 mainframe computers located in Briarcliff Manor, New York. These computers were interconnected with a network of over 1,000 terminals installed in airports and ticket offices across the country.
 
-![Sabre](./images/sabre.png)
+![Sabre](images/sabre.png)
 
 Source: [Sabre.com](https://central.sabre.com/)
 

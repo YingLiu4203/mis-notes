@@ -56,7 +56,7 @@ Overall, the choice of Internet connection method for a home network depends on 
 
 Following is a diagram of a typical home network.
 
-![home network](./images/home_networking.jpg)
+![home network](images/home_networking.jpg)
 
 [Source: Steve’s Smart Home Networking Guide](https://stevessmarthomeguide.com/build-home-network/)
 
@@ -80,7 +80,7 @@ The Internet is a complex system that connects many different networks, enabling
 - **Layer 4: Transport Layer**. The Transport Layer provides reliable data transfer between devices, ensuring that data is delivered in the correct order and without errors or duplication. This layer is responsible for segmentation, acknowledgement, and reassembly of data. Protocols at this layer include Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
 - **Layer 5: Application Layer**. The Application Layer is the highest layer of the Internet, responsible for providing services and interfaces for applications to communicate with each other. This layer supports protocols such as Hypertext Transfer Protocol (HTTP), Simple Mail Transfer Protocol (SMTP), and File Transfer Protocol (FTP).
 
-![Internet Layers](./images/layers.png)
+![Internet Layers](images/layers.png)
 [Source: WikiPedia](https://en.wikipedia.org/wiki/Internet_protocol_suite)
 
 These layers are necessary for several reasons:
@@ -116,9 +116,9 @@ It's worth noting that Class D and Class E addresses are not used for regular ne
 
 Following are digrams of IP addresses.
 
-![address byte](./images/addressing_byte.jpg)
-![address class](./images/addressing_class.jpg)
-![address summary](./images/address_summary.jpg)
+![address byte](images/addressing_byte.jpg)
+![address class](images/addressing_class.jpg)
+![address summary](images/address_summary.jpg)
 
 [Source: Geeks for Geeks](https://www.geeksforgeeks.org/introduction-of-classful-ip-addressing/)
 
@@ -132,7 +132,7 @@ Internet Protocol (IP) is responsible for addressing and routing data packets be
 
 The Internet Protocol (IP) is a packet-switching network protocol. In contrast to circuit-switching networks, which establish a dedicated end-to-end connection for the duration of the communication session, IP protocol breaks data into small packets and routes each packet independently through the network to its destination. This approach has numerous advantages, making IP a more reliable, flexible, scalable, efficient, and error-tolerant technology. IP's packet-switching approach provides fault tolerance via dynamic routing, ensuring that data can still be delivered even if some network segments fail - IP can retransmit the packet or route it through an alternative path. If a packet is lost or corrupted during transmission, the receiving device can simply send an error message to the sender, requesting retransmission of the affected packet. The sender can then resend the packet, and the receiving device can reassemble the data with the retransmitted packet. This process is seamless and efficient, with minimal disruption to the overall communication session. In contrast, circuit switching establishes a dedicated connection for the entire communication session. If a packet is lost or corrupted during transmission, the entire connection is terminated, and the connection must be reestablished before data can be resent. This process is not only time-consuming but also inefficient, as it requires the reestablishment of the entire connection.
 
-![Packet Switch Network](./images/Packet_Switching.gif)
+![Packet Switch Network](images/Packet_Switching.gif)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Packet_switching)
 
@@ -146,7 +146,7 @@ User Datagram Protocol (UDP) is a connectionless protocol that prioritizes speed
 
 The common language refers to the format in which data is transmitted and understood by devices on the network. On the Internet, different protocols use different language formats to transmit data. The Internet Protocol (IP) packet, Transmission Control Protocol (TCP) segment, and User Datagram Protocol (UDP) datagram are the fundamental units of data transmission in computer networks. Each has a unique data format that enables efficient and reliable communication over the internet.
 
-![IP Packet](./images/ip_packet.png)
+![IP Packet](images/ip_packet.png)
 
 [Source: Khan Academy](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:transporting-packets/a/transmission-control-protocol--tcp)
 
@@ -194,9 +194,9 @@ The DNS resolver then sends a query to a DNS root server, which directs the quer
 
 Here is a [Video about IP and DNS](https://youtu.be/5o8CwafCxnU). Following diagrams give a DNS resolving and DNS architecture.
 
-![DNS resolving](./images/dns.png)
+![DNS resolving](images/dns.png)
 
-![DNS architecture](./images/DNS_Architecture.png)
+![DNS architecture](images/DNS_Architecture.png)
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System)
 
@@ -214,7 +214,7 @@ The physical medium refers to the infrastructure that enables data transmission.
 
 The address system is responsible for identifying and locating devices on the network. On the web, this is achieved through the use of Uniform Resource Locators (URLs). The Uniform Resource Locator (URL) is a fundamental component of the internet, enabling users to access specific web pages and resources with ease. A URL is a string of characters that identifies the location of a resource on the internet, and it is composed of several parts, each serving a unique purpose. The different parts of a URL include Protocol (http or https), Subdomain (optional), Domain name, Port number (optional), Path, and Anchor/Fragment (optional). The following shows the structure of an URL.
 
-![URL structure](./images/URL_structure.jpg)
+![URL structure](images/URL_structure.jpg)
 
 [Source: Wikimedia commons](https://commons.wikimedia.org/wiki/File:URL_structure.jpg)
 
@@ -222,9 +222,9 @@ The address system is responsible for identifying and locating devices on the ne
 
 The communication protocol governs how data is transmitted over the network. On the web, the primary communication protocol is Hypertext Transfer Protocol (HTTP). HTTP is a set of rules that dictate how data is sent and received over the Internet. It enables devices to communicate with each other and exchange information in a standardized way.
 
-![Web](./images/TheWeb.png)
-![HTTP](./images/HTTP.png)
-![HTTP Steps](./images/HTTP_Steps.png)
+![Web](images/TheWeb.png)
+![HTTP](images/HTTP.png)
+![HTTP Steps](images/HTTP_Steps.png)
 
 [Source: ntu.edu.sg](https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
 
@@ -258,6 +258,6 @@ In high-frequency trading, where decisions occur in microseconds or even nanosec
 
 For example, consider a scenario where a trading firm in Los Angeles sends an order to buy a particular stock listed on the New York Stock Exchange (NYSE). The order, traversing long-distance network cables and encountering multiple network hops, faces considerable latency. The minimum communication delay is `2,451 miles/60 miles per ms = 49 ms`. A fast computer can perform milliions of operations in 49ms. In contrast, a trading firm colocated within the same data center as the NYSE servers experiences minimal latency due to the negligible physical distance between their servers. Real-world comparisons of communication time delay between cities like Los Angeles and New York underscore the tangible benefits of colocation in high-frequency trading. By leveraging colocation, market participants can execute trades with unparalleled speed and precision, enhancing profitability in the fast-paced world of electronic trading.
 
-![colocation](./images/colocation.png)
+![colocation](images/colocation.png)
 
 [Source: Colocation from SA Financial Marekts Journal](https://financialmarketsjournal.co.za/colocation-reducing-latency-in-financial-market-transactions-and-creating-an-algo-trading-friendly-market-environment/)
