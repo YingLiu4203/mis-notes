@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://misnotes.uk',
+    base: '/',
     integrations: [
         starlight({
             title: 'MIS Notes',
