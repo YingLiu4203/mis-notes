@@ -36,7 +36,7 @@ Without a database, managing and processing this data would be a daunting task. 
 
 File systems are designed for storing and retrieving files, not for processing transactional data. While file systems are excellent for storing large amounts of unstructured data, they lack the necessary features to support high-performance, concurrent, and fault-tolerant transactional data processing. One of the main reasons file systems are not suitable for transactional data processing is that they are not designed to handle concurrent access. In a transactional system, multiple users or applications need to access and update data simultaneously. File systems, however, are designed for sequential access, making them prone to bottlenecks and conflicts when multiple users try to access the same file simultaneously. Another reason file systems are not a good fit for transactional data processing is that they lack transactional consistency and durability. Transactional systems require that all changes be atomic, consistent, isolated, and durable (ACID). File systems, however, do not provide these guarantees, making it difficult to ensure data integrity and consistency in a transactional system.
 
-![File Access](images/file_access.png)
+![File Access](./images/file_access.png)
 
 Let's consider an example to illustrate this point. Suppose we have an e-commerce application that needs to process orders and update inventory levels in real-time. If we were to use a file system to store our transactional data, we might encounter the following issues:
 
@@ -72,7 +72,7 @@ Data Retrieval and Data Manipulation are two essential functions of a Database M
 
 A database transaction is a sequence of operations performed as a single logical unit of work. A transaction must exhibit four key properties, known as ACID properties: Atomicity, Consistency, Isolation, and Durability. We can understand these concepts better through the example of transferring $100 between two bank accounts.
 
-![transaction](images/transaction.png)
+![transaction](./images/transaction.png)
 
 - **Atomicity**: A transaction is an atomic unit of processing; it either fully completes or fully fails. When transferring $100 from Account A to Account B, the transaction includes two operations: debiting $100 from Account A and crediting $100 to Account B. Atomicity ensures that either both operations are completed successfully, or neither is done at all. If the system crashes after debiting Account A but before crediting Account B, the transaction will roll back, restoring Account A to its original state.
 - **Consistency**: A transaction must transition the database from one valid state to another, maintaining database rules. For example, if Account A has $500 and Account B has $300 before the transfer, the total amount of money in both accounts combined should still be $800 after the transfer. Consistency ensures that the database rules, such as the total balance remaining the same, are not violated.
@@ -325,7 +325,7 @@ Aggregated data also enables drill-down capabilities, allowing analysts to explo
 
 Following is an architecture of typical data warehouse system.
 
-![Data Warehouse](images/Data_Warehouse.png)
+![Data Warehouse](./images/Data_Warehouse.png)
 
 A data warehouse has the following components:
 

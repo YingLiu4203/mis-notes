@@ -8,7 +8,7 @@ title: Chapter 7 Web Programming
 
 Software applications do not run in isolation; they exist within a layered computing hierarchy:
 
-![Basic Computing Stack](images/computing_stack.png)
+![Basic Computing Stack](./images/computing_stack.png)
 
 * **Hardware**: The physical computational and storage machinery (Personal Computers, Laptops, Smartphones, Cloud Data Center Servers, CPUs, RAM, and SSDs).
 * **Operating System (OS)**: System software (such as Microsoft Windows, macOS, and Linux) that acts as the intermediary between raw hardware and user-facing software, managing system memory, file access, hardware drivers, and security.
@@ -18,7 +18,7 @@ Software applications do not run in isolation; they exist within a layered compu
 
 Web servers and local development environments rely on **hierarchical tree structures** for organizing files and directories.
 
-![Folder Tree Structure](images/folder_tree_structure.png)
+![Folder Tree Structure](./images/folder_tree_structure.png)
 
 * **Root and Subdirectories**: Folders branch downward from parent directories into child folders.
 * **File Extensions**: The suffix at the end of a filename (such as `.html`, `.css`, `.js`) signals file type and MIME association to both the Operating System and web browsers.
@@ -115,7 +115,7 @@ HTML forms capture user input and submit payloads to processing server endpoints
 
 CSS applies formatting rules to targeted HTML elements using a declarative syntax:
 
-![CSS Syntax Anatomy](images/css_syntax.png)
+![CSS Syntax Anatomy](./images/css_syntax.png)
 
 A CSS rule consists of:
 
@@ -163,7 +163,7 @@ A CSS rule consists of:
 
 Every renderable HTML element is interpreted by browser rendering engines as a modular rectangular box composed of four concentric layers:
 
-![CSS Box Model](images/css_box_model.png)
+![CSS Box Model](./images/css_box_model.png)
 
 1. **Content**: The inner rectangular area where text, images, and nested elements appear (sized by `width` and `height`).
 2. **Padding**: The clear space immediately surrounding the content area, sitting inside any borders.
@@ -186,7 +186,7 @@ h2 {
 
 Modern web pages avoid rigid, table-based layouts in favor of flexible, multi-device layouts such as **Flexbox** and **CSS Grid**:
 
-![Page Layout Flexbox](images/page_layout_flexbox.png)
+![Page Layout Flexbox](./images/page_layout_flexbox.png)
 
 * **Header**: Global top-level branding and navigation banner.
 * **Aside**: Sidebar container for auxiliary navigation, secondary links, or metadata.

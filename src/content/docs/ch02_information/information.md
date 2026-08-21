@@ -32,7 +32,7 @@ It is intuitive to think that when the probability distribution of a random vari
 
 Shannon gave a simple mathematic definition of entropy that can be explained with a simple example. Consider a fair coin toss, where the outcome can be either heads `(H)` or tails `(T)`. Since the coin is fair, each outcome has an equal probability of `P(H) = P(T) = 0.5`. Entropy `H(X)` measures the average amount of information produced by a stochastic source of data. For our fair coin toss example, the amount of information is 1 bit:
 
-![Entropy](images/Shannon-Entropy.png)
+![Entropy](./images/Shannon-Entropy.png)
 
 [Source: Information Entropy](https://medium.com/@mhannan94/information-entropy-3cce2bac62a2)
 
@@ -104,7 +104,7 @@ Binary numbers, which are the language of computers, consist of only two digits:
 
 Each binary digit has a corresponding place value. The rightmost bit has a place value of 1, which is 2^0. The 2nd bit from the right has a place value of 2, which is 2^1, the 3rd bit has a place value of 4, which is 2^2, and so on and so forth. It is a tradition in computer science to count from `0`, therefore the nth bit has a place value of `2 = 2^n`.
 
-![Binary Counter](images/Binary_counter.gif)
+![Binary Counter](./images/Binary_counter.gif)
 
 [source: Wikipedia binary number](https://en.wikipedia.org/wiki/Binary_number)
 
@@ -176,7 +176,7 @@ One of the key ways in which binary is used is to represent text, allowing compu
 In the ASCII system, each character - whether a letter, number, symbol, or space - is assigned a unique binary code. This binary code is made up of 7 or 8 bits, depending on the system, and is represented using only the two digits 0 and 1. The combination of these 0s and 1s corresponds to a specific character, allowing computers to understand and process text.
 For example, the letter `"A"` is represented by the binary code `01000001`, while the letter `"B"` is represented by `01000010`. The number `"1"` is represented by `00110001`, and the space character is represented by `00100000`. This system allows for a total of 128 unique characters to be represented, including all the letters of the alphabet (both uppercase and lowercase), numbers, and common symbols.
 
-![ASCII Table](images/ascii.webp)
+![ASCII Table](./images/ascii.webp)
 [Source](https://linuxhandbook.com/ascii-table/)
 
 In the early days of computing, communication was limited to a few languages and characters, ASCII was enough. However, with the advent of globalization and the internet, the need for a universal language of characters became increasingly important. This is where Unicode comes in – a revolutionary character encoding standard that has enabled communication across languages and cultures. Unicode was first introduced in 1991 by a group of computer scientists and linguists who recognized the need for a unified character set. They aimed to create a standard that would allow computers to represent and exchange text in any language, regardless of the platform or device.
@@ -206,7 +206,7 @@ Binary data represents screen pixels through a combination of bits (0s and 1s) t
 - Pixel Array: The binary code for each pixel is arranged in a 2D array, representing the entire screen. Each pixel's binary code is placed in its corresponding position in the array.
 - Screen Representation: The 2D array of binary codes represents the entire screen, with each pixel's binary code determining its color and intensity.
 
-![Pixel and color](images/pixel.png)
+![Pixel and color](./images/pixel.png)
 
 [source: Stanford CS 101 Image introduction](https://web.stanford.edu/class/cs101/image-1-introduction.html)
 
@@ -216,7 +216,7 @@ Here is a Youtube video [HOw Pixels Work](https://www.youtube.com/watch?v=0B79dG
 
 Below is a table of basic colors and their names used in a web page.
 
-![css colors](images/CSS-Color.webp)
+![css colors](./images/CSS-Color.webp)
 
 ### 4.5 Multimedia and more
 
