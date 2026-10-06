@@ -268,10 +268,3 @@ Programming languages translate human-readable logic into machine-executable ins
 ## 5 Enterprise Perspective — Dynamic Web Applications
 
 In contemporary software architecture, virtually **100% of commercial enterprise websites** are not static handwritten HTML files. Instead, they are generated dynamically by **Web Applications** (built with frameworks in JavaScript/Node.js, Python, Java, or C#). These server applications query relational and distributed databases, enforce access control, and construct responsive HTML/CSS/JS payloads on the fly for client browsers.
-
-## Student Review & Practice Questions
-
-1. **Architecture**: Differentiate between the distinct roles of HTML, CSS, and JavaScript in web applications.
-2. **CSS Box Model**: If an element has a specified `width` of 300px, `padding` of 50px on all sides, `border` of 15px, and `margin` of 20px, what is the total horizontal layout footprint occupied by this element?
-3. **Script Placement**: Why is it frequently recommended to place `<script>` tags that interact with DOM elements at the very bottom of the `<body>` element rather than inside `<head>`?
-4. **CSS Selectors**: Contrast the intended use case of an ID selector (`#header`) versus a Class selector (`.highlight`).
