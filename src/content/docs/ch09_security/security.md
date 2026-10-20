@@ -2,35 +2,48 @@
 title: Chapter 9 Security
 ---
 
-## 1 Introduction
 
 [How security is your password](https://www.passwordmonster.com/)? How many do you have and how do you manage them?
 
-Information security is a critical aspect of today's digital age, as it encompasses the protection of sensitive data and systems from unauthorized access, use, disclosure, disruption, modification, or destruction. The concept of information security is multifaceted and comprises several key elements, including privacy, authentication, authorization, integrity, non-repudiation, and availability.
+Building directly upon the cryptographic principles established in the previous chapter, we now turn to the broader discipline of computer security. While cryptography provides the mathematical bedrock—transforming plaintext into secure ciphertext to guarantee confidentiality, integrity, and authenticity—computer security represents the comprehensive operational framework built upon that foundation. Securing modern digital systems requires more than just mathematical algorithms in isolation; it demands integrating these cryptographic primitives into complete defenses that protect operating systems, network infrastructures, and user data against unauthorized access, malicious disruption, and system exploitation.
 
-- Privacy is the right of individuals to control their personal information and to ensure that it is not disclosed to unauthorized parties. In the digital realm, privacy is crucial, as personal data is often collected, stored, and transmitted online. Information security measures, such as encryption and access controls, help to protect individual privacy and prevent data breaches.
-- Authentication is the process of verifying the identity of users, devices, or systems. This is achieved through various methods, including passwords, biometrics, and tokens. Authentication ensures that only authorized entities have access to sensitive information and systems.
-- Authorization is the process of determining what actions a user or system can perform once they have been authenticated. This includes access controls, such as role-based access control and mandatory access control, which ensure that users only have access to the resources and data they need to perform their tasks.
-- Integrity refers to the protection of data from unauthorized modification, deletion, or alteration. This is achieved through measures such as digital signatures and checksums. Ensuring the integrity of data is critical, as any changes or alterations can compromise its accuracy and reliability.
-- Non-repudiation is the assurance that a sender of a message cannot deny having sent the message. This is achieved through digital signatures and certificates, which provide a tamper-evident record of transactions and communications.
-- Availability refers to the accessibility and usability of information and systems. This includes ensuring that systems are operational and accessible when needed, and that data is retrievable and usable.
-- Audit is a formal process of evaluating an organization’s information systems to ensure compliance with security policies and identify potential vulnerabilities. The audit process typically includes planning, gathering system and user activity data (all user activities are logged), identifying vulnerabilities through scanning or testing, and generating a report with findings and recommended improvements.
-- Digital forensics is the practice of collecting, preserving, and analyzing digital evidence to investigate and understand security incidents or cybercrimes. Implementation of forensics involves several stages: data acquisition (creating an exact copy of the affected systems), integrity preservation (ensuring evidence is not altered), in-depth analysis (examining files, logs, and metadata), and reporting (documenting the findings for legal or organizational action).
+## 1 Introduction
 
-Below is an example of Alice sending a confidential message to Bob. It illustrate the concepts of information security:
+IInformation security is the discipline dedicated to protecting sensitive systems, networks, and data from unauthorized use, disruption, alteration, or destruction. In practice, the field is defined by an ongoing interplay between operational vulnerabilities—the inherent problems that arise when processing information across interconnected environments—and cryptographic or administrative countermeasures—the solutions designed to neutralize those risks. A robust security posture is constructed from several foundational pillars, each addressing a distinct threat to digital assets.
 
-- Privacy: Alice wants to ensure that only Bob can read the message, and no one else can access it. She uses encryption to protect the message, so even if an unauthorized party intercepts it, they won't be able to understand its contents.
-- Authentication: Before sending the message, Alice verifies Bob's identity through a digital certificate or password to ensure she's sending it to the right person.
-- Authorization: Alice checks Bob's access level and ensures he has the necessary clearance to receive the message.
-- Integrity: Alice uses a digital signature or checksum to ensure the message isn't tampered with or altered during transmission. When Bob receives the message, he can verify its integrity using the same digital signature or checksum.
-- Non-repudiation: Alice uses a digital signature that includes a timestamp and her unique identity, so Bob can verify the message came from her and when it was sent. This prevents Alice from denying she sent the message.
-- Availability: Alice ensures the message is stored on a reliable server and transmitted through a secure channel, so Bob can access it when needed.
-- Audit: Alice wants to ensure that systems are protected against unauthorized access, data breaches, and other cyber threats. Both security policies and system/user activity data (logs) are used in the audit process.
-- Forensics: When an attack happens, Alice wants to find out how an attack occurred, what were affected, and who is responsible. System/user activity data (logs) are important in digital forensics.
+The first major challenge of the digital era involves the exposure of private information. As users and organizations store vast quantities of financial records, health metrics, and personal identifiers online, unmonitored communication channels invite eavesdropping, corporate espionage, and identity theft. The countermeasure to this vulnerability lies in data privacy controls and modern encryption. By applying mathematical ciphers to data both in transit and at rest, systems ensure that intercepted messages appear as unintelligible noise, preserving the confidentiality of sensitive records even over insecure transmission mediums.
 
-To fully understand and effectively utilize security tools like encryption and digital certificates, it's essential to have a basic understanding of cryptography. Cryptography is the practice of protecting the confidentiality, integrity, and authenticity of information by using mathematical algorithms to transform it into an unreadable format, called ciphertext. This ancient art has evolved significantly over the centuries, and today, it plays a vital role in securing online transactions, communication networks, and digital data.
+Closely tied to data exposure is the risk of impersonation. In open networks, malicious actors frequently attempt to pose as legitimate users, devices, or services to gain illicit entry into protected systems. To solve this problem, security architectures rely on authentication, the formal verification of identity. Rather than relying on simple knowledge-based secrets, such as passwords, modern implementations increasingly combine multiple authentication factors: credentials known by the user, physical tokens or hardware keys in their possession, and unique biometric characteristics such as fingerprints or facial geometry.
 
-## 2 Malware
+Once an identity is verified, organizations encounter the problem of privilege management. Legitimate users who possess excessive or unchecked access permissions represent significant security risks, whether through deliberate insider abuse or account compromise. Systems solve this by enforcing authorization mechanisms anchored by the principle of least privilege. Through structured frameworks such as Role-Based Access Control (RBAC) and Mandatory Access Control (MAC), an environment ensures that authenticated entities can only view, execute, or manipulate the specific subsets of data strictly necessary for their assigned tasks.
+
+Beyond controlling access, systems must protect the reliability of the information itself. Data tampering poses a severe threat; unauthorized alterations, deletions, or data corruption can compromise critical databases, financial ledgers, and operational commands. The technical remedy for this risk is data integrity enforcement, typically implemented via cryptographic hash functions and digital signatures. Hashes generate unique mathematical fingerprints of digital payloads, allowing any modification—down to a single flipped bit—to be immediately detected before the corrupted data is accepted.
+
+In critical transactions, detecting modifications alone is insufficient; organizations must also prevent parties from denying their participation in an exchange. The problem of repudiation arises when an author of a message or financial instruction later claims the action was forged by another party. Non-repudiation provides legal and technical certainty by pairing Public Key Infrastructure (PKI) with tamper-evident digital certificates. Because these digital signatures are cryptographically bound to an individual’s private key, the sender cannot plausibly disown the transmission after it has been executed.
+
+Even if confidentiality and integrity remain uncompromised, systems are vulnerable to downtime and outages. Distributed Denial-of-Service (DDoS) attacks, hardware failures, environmental disasters, and software bugs can disrupt critical operations, making essential resources unavailable to authorized users. To guarantee availability, engineering teams implement redundant infrastructure across geographically distinct regions, automated failover mechanisms, proactive traffic scrubbing, and immutable, isolated backup routines capable of restoring services with minimal latency.
+
+Finally, maintaining a reliable defensive posture requires systemic visibility and post-incident accountability. Software environments inevitably develop subtle vulnerabilities, configuration drift, and unpatched exploits over time. Security audits solve this blindness through automated vulnerability scans, penetration testing, and centralized event logging, systematically measuring defenses against established regulatory standards. When a breach does take place, organizations turn to digital forensics to investigate the damage. By taking bit-stream disk images, maintaining strict chains of custody, and scrutinizing memory dumps and access logs, forensic analysts reconstruct the intrusion timeline, identify the root cause, and provide actionable evidence suitable for organizational remediation and legal proceedings.
+
+## 2 An Example
+
+To understand how security requirements translate into concrete technical mechanisms, consider the scenario of Alice transmitting a confidential project dossier to Bob over an untrusted network. In this exchange, the communication system must satisfy explicit security requirements across every stage of the lifecycle, pairing each functional requirement with an appropriate engineering solution.
+
+The primary requirement is privacy, stipulating that only Bob may view the contents of the payload, rendering the data unreadable to any eavesdropper or intermediate network provider. To satisfy this requirement, the application employs hybrid encryption. Alice’s client software generates an ephemeral, symmetric AES-256 session key to encrypt the bulk dossier rapidly, and then encrypts this single-use symmetric key with Bob’s public RSA or elliptic-curve key. When transmitted across the internet, the ciphertext appears as meaningless pseudorandom noise, ensuring confidentiality even if an adversary captures the packets via a man-in-the-middle tap. Only Bob, possessing the corresponding private key, can decrypt the symmetric key and subsequently read the dossier.
+
+Before dispatching this ciphertext, Alice must fulfill the mutual authentication requirement: both parties must positively verify that they are communicating with the intended counterpart rather than an impersonator. The system resolves this through Public Key Infrastructure (PKI) and digital certificates signed by a trusted Certificate Authority (CA). Alice’s workstation inspects Bob’s digital certificate, validating its expiration, cryptographic signature, and revocation status. Simultaneously, Bob authenticates to his own local workstation using multi-factor authentication (MFA)—combining a memorized passphrase with an enterprise hardware security token—guaranteeing that physical control of the decryption endpoint has not been compromised.
+
+Even after Bob’s identity is validated, the system must enforce authorization requirements to confirm that Bob holds the explicit privilege level necessary to receive and interact with the dossier. Identity alone does not imply clearance. To implement this control, the messaging platform integrates an Attribute-Based or Role-Based Access Control (RBAC) engine. The system queries an enterprise directory service to confirm Bob’s role and department clearances before dispatching the payload. If Bob’s status lacks the clearance label mapped to the dossier's classification metadata, the system blocks transmission and rejects access regardless of his authenticated identity.
+
+During transit, the communication must satisfy the integrity requirement, ensuring that unauthorized parties or transmission errors cannot alter, inject, or truncate any portion of the data undetected. The solution pairs a secure cryptographic hash function, such as SHA-256, with a digital signature. Alice’s system computes a unique hash digest of the original dossier, which is then encrypted using her private key to produce a digital signature attached to the transmission. Upon arrival, Bob’s client recalculates the hash of the received document and compares it to the decrypted signature; a mismatch of even a single bit alerts Bob that the transmission has been tampered with or corrupted, prompting the application to discard the payload immediately.
+
+Coupled with integrity is the requirement for non-repudiation, which means that Alice cannot subsequently deny having authored and dispatched the document, and Bob cannot claim to have received an altered draft. This requirement is met by using Alice’s digital signature. Because only Alice holds her private signing key, this creates legally binding, undeniable proof of origin and dispatch time that can withstand scrutiny in a legal audit.
+
+The system must also guarantee availability, meaning that Bob can reliably retrieve and read the dossier whenever it is needed, without experiencing system lockouts, service degradation, or transmission loss. To satisfy this operational requirement, the underlying infrastructure relies on redundant storage nodes, load-balanced messaging relays, and active-active failover mechanisms across multiple data centers.
+
+To ensure compliance and continuous defense against emerging threats, the workflow must meet strict auditing requirements. Every discrete phase of the interaction—credential validation, authorization queries, encryption handshakes, transmission timestamps, and decryption attempts—is recorded by security daemons as structured audit logs. Automated auditing engines periodically parse these immutable logs against organizational security policies, flagging anomalous access spikes, repeated failed decrypts, or outdated software configurations for administrator remediation.
+
+## 3 Malware
 
 Malware is a general term used to describe any type of malicious software that is designed to harm or exploit a computer system or its data. Malware can take many forms, including viruses, worms, trojans, spyware, adware, ransomware, and botnets.
 
@@ -46,7 +59,7 @@ Malware is a general term used to describe any type of malicious software that i
 - Backdoor: A secret entry point in a computer system that allows hackers to access the system without being detected. Example: The "Shadow Brokers" backdoor, which was discovered in 2016 and allowed hackers to access NSA hacking tools.
 - Keylogger: A program that records every keystroke made on a computer, often used to steal sensitive information like passwords. Example: The "Ghost RAT" keylogger, which was used to steal sensitive information and was found on millions of computers in 2011.
 
-### 2.1 How Can Malware Break Into Your System?
+### 3.1 How Can Malware Break Into Your System?
 
 Don't be scared by the many types of malware because they are just different harms they can do after breaking into your system. The best protection is understanding the ways malware can break into you system and block those ways. Malware can break into a system through four primary entry points:
 
@@ -55,13 +68,13 @@ Don't be scared by the many types of malware because they are just different har
 - Social Engineering (Phishing): Tricking users into revealing login credentials or installing malware through emails, messages, or social media.
 - Weak Passwords: Using easily guessable passwords, allowing hackers to gain access.
 
-### 2.2 Antivirus Software ?
+### 3.2 Antivirus Software ?
 
 Many books and people tell you that antivirus software is an essential tool in protecting your digital security because it prevent malware from infecting your system. However, the author of this book would argue that it is wrong: it cannot prevent malware from infecting your system because it cannot detect any **NEW** malware (virus or worms). For example, if Microsoft Apple, or Google system has a security bug that is exploited by a worm, how could antivirus software know it? If a user want to install a new virus that only still your email address, how could antivirus software prevent it?
 
 And it comes with the cost of anti virus software to provide real time protection. Two big costs are subscription fee and resource utilization. The antivirus software can consume system resources (CPU, memory, etc.), potentially slowing down your computer by 20%, more or less. If you can following the following best practices, your system is safe.
 
-### 2.3 Protection
+### 3.3 Protection
 
 To prevent malware infections and keep your system safe, it's essential to:
 
@@ -71,7 +84,7 @@ To prevent malware infections and keep your system safe, it's essential to:
 - Don't leak your password to untrusted ones.
 - Have multiple data copies.
 
-## 3 DOS and DDOS
+## 4 DOS and DDOS
 
 The terms DOS (Denial of Service) and DDOS (Distributed Denial of Service) refer to types of cyberattacks that aim to make computer resources or networks unavailable by flooding them with traffic or exploiting vulnerabilities. A DOS attack is a type of cyberattack where an attacker attempts to make a computer or network resource unavailable by flooding it with traffic or exploiting a vulnerability. This is typically done by sending a large amount of data or requests to the targeted system, overwhelming its resources and causing it to slow down or crash. For example, a website may be flooded with a large number of requests from a single source, causing the server to become overwhelmed and unavailable to legitimate users. Similarly, an attacker may exploit a vulnerability in a network device, causing it to malfunction and deny service to users.
 
