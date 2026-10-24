@@ -6,6 +6,8 @@ title: Chapter 6 Database
 
 In today's digital age, we generate vast amounts of data every day, from simple text messages and emails to complex files and transaction records. This data is invaluable to businesses, as it contains crucial information about customers, sales, and operations. For example, [FreshDirect](https://www.freshdirect.com/), a prominent online grocery store based in New York, has revolutionized the grocery shopping experience by utilizing customer purchasing data as a core component of its business strategy.
 
+In August 2026 bankruptcy proceedings, reported by [Yahoo Finance](https://finance.yahoo.com/technology/ai/articles/google-paid-10m-spirit-airlines-152841454.html), Google secured a winning $10 million bid to acquire the comprehensive digital footprint of Spirit Airlines, aiming to leverage decades of corporate communication and operational records to train its enterprise artificial intelligence models. The massive corpus spans roughly 100 million emails, 500 million Microsoft Teams messages, and 17 million OneDrive and SharePoint files, alongside flight operations, scheduling systems, and payroll history. While consumer loyalty records and passenger personal data are explicitly excluded, and an independent third party is mandated to scrub and deidentify sensitive information before transfer, the proposed sale has sparked fierce privacy backlash.
+
 ### 1.1 Background and Business Challenges
 
 Founded in 2002, FreshDirect delivers fresh, high-quality groceries directly to customers' doors in the New York metropolitan area. The company has distinguished itself from traditional brick-and-mortar grocery stores through its comprehensive online platform and focus on convenience, quality, and customer satisfaction. A key element of FreshDirect's success lies in its strategic use of customer purchasing data. The grocery industry is highly competitive, with thin margins and complex logistics. Traditional grocery stores face challenges such as inventory management, waste reduction, personalized marketing, and customer retention. FreshDirect recognized early on that leveraging customer data could address these challenges and provide a competitive edge.
@@ -305,16 +307,27 @@ COMMIT TRANSACTION;
 - MySQL: Open source, high performance and widely used for web applications (LAMP stack).
 - PostgreSQL: Open source, highly extensible with support for complex queries, JSON, and full-text search.
 - Oracle Database: Enterprise-grade with high performance, scalability, and security.
--Microsoft SQL Server: Deep integration with Microsoft products (Azure, Power BI, .NET).
+  -Microsoft SQL Server: Deep integration with Microsoft products (Azure, Power BI, .NET).
 - SQLite: Open source, lightweight, and ideal for mobile apps and embedded systems.
 
 ## 4 Data Warehouse and Big Data
 
-The advent of Database Warehouses and Big Data has revolutionized the way we store, manage, and analyze data. A Database Warehouse is a centralized repository that stores data from various sources, making it easily accessible for analysis and reporting. Big Data, on the other hand, refers to the large and complex sets of data that traditional databases cannot handle.
+Organizations use data both to run daily operations and to understand how those operations can improve. Two groups of internal users rely on organizational data: business analysts, who create reports and support better decisions, and data scientists, who use data analysis and machine learning or AI to discover new insights. These needs are served by different kinds of database workloads: Online Transaction Processing (OLTP) supports routine business transactions, while Online Analytical Processing (OLAP) supports analysis across large amounts of data.
+
+| | OLTP | OLAP |
+|---|---|---|
+| Primary purpose | Record and process day-to-day transactions | Analyze data to answer business questions |
+| Typical users | Customers and operational staff | Business analysts and data scientists |
+| Data and queries | Current, detailed data; frequent, short reads and writes | Historical and often consolidated data; complex queries and aggregations |
+| Example | Record a sale or process a bank transfer | Compare sales by product, store, and month |
+
+OLTP systems prioritize fast, reliable transactions and data consistency. OLAP systems prioritize efficient analysis, often using data consolidated from multiple OLTP systems. Data warehouses and data lakes help organizations make this data available for reporting, analysis, and AI.
 
 ### 4.1 Data Warehouse
 
 A Data Warehouse is designed to support business intelligence (BI) activities, such as data analysis and reporting. It provides a single, unified view of an organization's data, making it easier to make informed decisions. A Data Warehouse typically consists of dimensions and facts. Dimensions provide context to the data, such as time, location, and product category, while facts represent the data being measured, such as sales amount and number of units sold.
+
+Data warehouses are primarily used for OLAP workloads. Data from operational OLTP systems and other sources is integrated, cleaned, and organized for analysis. Business analysts can then use the warehouse to generate reports and answer questions—for example, how sales vary by product, store, or time period. Data scientists may also use warehouse data as one source for deeper analysis and machine learning.
 
 The benefits of using a Data Warehouse are numerous. Firstly, it enables improved decision-making by providing a comprehensive view of an organization's data. Secondly, it increases efficiency by automating the process of consolidating and analyzing data.
 
@@ -339,6 +352,10 @@ Big Data refers to the vast and complex sets of data that traditional data proce
 
 Big Data includes structured, semi-structured, and unstructured data, such as social media data, sensor data, and text data.
 
+### 4.3 Data Lake
+
+A data lake is a centralized repository that stores copies of data from across an organization, often in its original format. It is especially useful for unstructured data such as text, images, videos, and sensor readings, which may not fit neatly into the tables and predefined structure of a data warehouse. Data lakes can also hold structured and semi-structured data. Because they preserve diverse data for later processing, they are commonly used as a source for data science, machine learning, and AI, as well as other forms of analysis.
+
 ## 5 Cloud Database
 
 The advent of cloud computing has revolutionized the way we store, manage, and analyze data. The traditional methods of data management, which were often cumbersome and prone to errors, have been replaced by the cloud database, a more efficient and effective way of handling data. More and more companies are turning to cloud databases for their scalability, reliability, and reduced management effort.
@@ -352,6 +369,8 @@ In addition to scalability and reliability, cloud databases also offer reduced m
 Cloud service providers such as Microsoft Azure, Amazon Web Service (AWS), and Google Cloud offer a range of cloud databases. These databases provide high performance, scalability, and reliability, making them ideal for businesses that require real-time data processing and analytics. The benefits of using cloud databases from these providers include reduced costs, increased scalability, and improved reliability. Users can choose the database that best fits their needs, and easily scale up or down as required. Additionally, cloud databases provide automatic software updates, backups, and security, freeing up users to focus on their applications and business.
 
 ## 6 Two Cases
+
+Data is essential to the day-to-day operation of modern businesses and public services: teams rely on accurate, available information to make decisions and keep critical services running. The following cases show how failures in data systems—from unavailable safety information to an inefficient database query—can quickly disrupt operations and affect customers.
 
 ### 6.1 U.S. Flights Grounded Due to FAA System Failure
 
