@@ -314,12 +314,12 @@ COMMIT TRANSACTION;
 
 Organizations use data both to run daily operations and to understand how those operations can improve. Two groups of internal users rely on organizational data: business analysts, who create reports and support better decisions, and data scientists, who use data analysis and machine learning or AI to discover new insights. These needs are served by different kinds of database workloads: Online Transaction Processing (OLTP) supports routine business transactions, while Online Analytical Processing (OLAP) supports analysis across large amounts of data.
 
-| | OLTP | OLAP |
-|---|---|---|
-| Primary purpose | Record and process day-to-day transactions | Analyze data to answer business questions |
-| Typical users | Customers and operational staff | Business analysts and data scientists |
+|                  | OLTP                                                     | OLAP                                                                     |
+| ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Primary purpose  | Record and process day-to-day transactions               | Analyze data to answer business questions                                |
+| Typical users    | Customers and operational staff                          | Business analysts and data scientists                                    |
 | Data and queries | Current, detailed data; frequent, short reads and writes | Historical and often consolidated data; complex queries and aggregations |
-| Example | Record a sale or process a bank transfer | Compare sales by product, store, and month |
+| Example          | Record a sale or process a bank transfer                 | Compare sales by product, store, and month                               |
 
 OLTP systems prioritize fast, reliable transactions and data consistency. OLAP systems prioritize efficient analysis, often using data consolidated from multiple OLTP systems. Data warehouses and data lakes help organizations make this data available for reporting, analysis, and AI.
 
@@ -354,7 +354,9 @@ Big Data includes structured, semi-structured, and unstructured data, such as so
 
 ### 4.3 Data Lake
 
-A data lake is a centralized repository that stores copies of data from across an organization, often in its original format. It is especially useful for unstructured data such as text, images, videos, and sensor readings, which may not fit neatly into the tables and predefined structure of a data warehouse. Data lakes can also hold structured and semi-structured data. Because they preserve diverse data for later processing, they are commonly used as a source for data science, machine learning, and AI, as well as other forms of analysis.
+A data lake is a centralized storage repository designed to ingest and store massive volumes of structured, semi-structured, and unstructured data in its original, native format without enforcing a predefined schema. Traditional data warehouses demand rigid, upfront schema-on-write modeling (ETL), which creates bottlenecks when managing diverse modern data assets such as telemetry, raw application logs, documents, and real-time event streams. In contrast, organizations rely on data lakes because they decouple scalable, cost-effective object storage from compute resources and adopt a flexible schema-on-read approach. This allows enterprises to capture raw operational data immediately at scale, deferring transformation until specific business questions, machine learning models, or analytical needs arise.
+
+In practice, a data lake serves as the primary training ground for modern artificial intelligence, acting as an expansive digital pantry where machine learning systems find the raw fuel they need to learn. Because contemporary AI—especially large language models, computer vision systems, and recommendation engines—relies on diverse information rather than just tidy spreadsheets, the lake gathers customer conversations, documents, images, audio files, and user behaviors into one searchable hub. Data teams can continuously feed this rich, unvarnished history into algorithms to detect subtle patterns, fine-tune domain-specific chatbots, and generate predictive business insights. By keeping every piece of historical data accessible and intact, the data lake ensures that as new AI techniques emerge, organizations have the raw foundation ready to build and retrain increasingly capable models.
 
 ## 5 Cloud Database
 
